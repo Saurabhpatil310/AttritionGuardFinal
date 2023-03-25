@@ -1,0 +1,295 @@
+{% extends "nav.html"%}
+
+{% block content%}
+
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>AttritionGuard</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="{%static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css' %}" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="{%static 'https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap' %}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{%static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{%static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <!--<header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="\">
+            <img src="{%static '/images/weblogo.jpg' %}" alt="logonotload" />
+            <span>
+            AttritionGuard
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service"> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact">Contact us</a>
+                </li> -->
+               <!-- <li class="nav-item">
+                  <a class="nav-link" href="register">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="attrition">Predict</a>
+                </li>
+
+              </ul>
+
+      
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form> -->
+            <!--</div>
+            <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+              <a href="login">
+                LOGIN
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header> -->
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="slider_item-box">
+              <div class="slider_item-container">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="slider_item-detail">
+                        <div>
+                          <h1>
+                            Welcome to <br />
+                            Our Employee Attrition Portal
+                          </h1>
+                          <p>
+                            Our website is an advanced HR analytics platform that can help organizations predict the likelihood of their 
+                            employees leaving the company by using machine learning algorithms.
+                            <!-- With accurate attrition predictions, 
+                            companies can take proactive measures to reduce employee turnover, improve employee engagement,and save on recruitment costs.  -->
+                          </p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="slider_img-box">
+                        <div>
+                          <img src="{%static 'images/turnover.jpg' %}" alt="" class="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end slider section -->
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding ">
+    <div class="container">
+      <h2 class="custom_heading">Our Services</h2>
+      <p class="custom_heading-text">
+        We provide services based on Data.
+      </p>
+      <div class=" layout_padding2">
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="{%static 'images/ml.png' %}" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Machine Learning</h5>
+              <p class="card-text">
+                We use machine learning (ML) predictive algorithms to forecast outcomes based on historical data
+                 and insights for businesses to make informed decisions and optimize operations.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{%static 'images/visul.jpg' %}" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Data Visualization</h5>
+              <p class="card-text">
+                Data visualization is the graphical representation of information and data. It involves the use of charts, graphs, and other visual aids to help people
+                 understand complex data and identify patterns and trends.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{%static 'images/data.jpg' %}" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Data Cleaning</h5>
+              <p class="card-text">
+                There are many variations of passages of Lorem Ipsum
+                available, but the majority have suffered alteration in some
+                form, by injected humour, or randomised words which don't look
+                even slightly believable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="https://www.ibm.com/topics/machine-learning" class="custom_dark-btn">
+          Read More
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end service section -->
+
+  <!-- about section -->
+
+  <section class="fruit_section layout_padding-top">
+    <div class="container">
+      <h2 class="custom_heading">What is Employee Attrition Means??</h2>
+      <p class="custom_heading-text">
+        Our experts observed corporate industry more than 30 years and came with following conclusions
+      </p>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+             What is Attrition ??
+            </h3>
+            <p class="mt-4 mb-5">
+              Employee attrition is a term used to describe the process of employees leaving an organization over 
+              a period of time. It can occur voluntarily, as employees seek better opportunities elsewhere, or involuntarily,
+               due to factors such as downsizing, restructuring, or termination. High levels of attrition can have a negative
+                impact on an organization, including increased costs of recruitment, loss of valuable skills and knowledge, 
+                decreased morale among remaining employees, and a negative impact on productivity and customer satisfaction. 
+              Therefore, organizations often strive to implement strategies to reduce attrition rates and retain their employees.
+            </p>
+            <div>
+              <a href="https://www.spiceworks.com/hr/engagement-retention/articles/what-is-attrition-complete-guide/" class="custom_dark-btn">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <img src="{% static 'images/attrition.png' %}" alt="" class="" width="300px" height="200px" />
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Causes of Employee Attrition 
+            </h3>
+            <p class="mt-4 mb-5">
+              There can be various reasons for employee attrition. Some of the most common reasons include lack of job satisfaction,
+              limited growth opportunities, poor work-life balance, inadequate compensation and benefits, negative work environment,
+              lack of recognition and appreciation, and conflict with managers or coworkers. Employees may also leave due to personal 
+              reasons such as relocation, health issues, or family obligations. Additionally, industry-specific factors such as job 
+              market trends, competition for talent, and economic conditions can also influence employee attrition. Addressing these 
+              factors and implementing retention strategies can help organizations reduce attrition rates and retain their employees
+            </p>
+            <div>
+              <a href="https://sightsinplus.com/insight/culture/7-causes-of-employee-attrition-and-strategies-to-reduce-it/" class="custom_dark-btn">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center ">
+            <img src="{% static 'images/pasted.png' %}" alt="" class="" width="300px" />
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2-top layout_padding-bottom">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Strategies to Reduce Employee attrition 
+            </h3>
+            <p class="mt-4 mb-5">
+              Organizations can implement several strategies to reduce employee attrition. These strategies include 
+              improving job satisfaction by providing growth opportunities, promoting work-life balance, offering 
+              competitive compensation and benefits, recognizing and appreciating employee contributions, creating 
+              a positive work environment, and addressing conflicts effectively. Organizations can also conduct exit 
+              interviews to gain insights into the reasons for attrition and use this feedback to improve retention 
+              strategies. Additionally, providing regular training and development programs, encouraging open 
+              communication and feedback, and promoting a culture of learning and innovation can help retain employees. 
+              Offering employee engagement programs such as employee wellness programs, mentorship programs, and 
+              employee recognition programs can also help retain employees.
+
+            </p>
+            <div>
+              <a href="https://www.driveresearch.com/market-research-company-blog/9-strategies-for-reducing-employee-attrition/" class="custom_dark-btn">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <img src="{% static 'images/images.png' %}" alt="" class="" width="300px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+
+ 
+</body>
+
+</html>
+{% endblock %}

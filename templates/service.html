@@ -1,0 +1,62 @@
+
+{% extends "nav.html"%}
+
+{% block content%}
+
+{%load static%}
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding ">
+    <div class="container">
+      <h2 class="custom_heading">Our Services</h2>
+      <p class="custom_heading-text">
+        We provide services based on Data.
+      </p>
+      <div class=" layout_padding2">
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="{%static 'images/ml.png' %}" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Machine Learning</h5>
+              <p class="card-text">
+                We use machine learning (ML) predictive algorithms to forecast outcomes based on historical data
+                 and insights for businesses to make informed decisions and optimize operations.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{%static 'images/visul.jpg' %}" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Data Visualization</h5>
+              <p class="card-text">
+                Data visualization is the graphical representation of information and data. It involves the use of charts, graphs, and other visual aids to help people
+                 understand complex data and identify patterns and trends.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{%static 'images/data.jpg' %}" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Data Cleaning</h5>
+              <p class="card-text">
+                There are many variations of passages of Lorem Ipsum
+                available, but the majority have suffered alteration in some
+                form, by injected humour, or randomised words which don't look
+                even slightly believable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="https://www.ibm.com/topics/machine-learning" class="custom_dark-btn">
+          Read More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  {% endblock %}

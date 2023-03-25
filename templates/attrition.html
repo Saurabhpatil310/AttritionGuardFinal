@@ -1,0 +1,268 @@
+{% extends "nav.html"%}
+
+{% block content%}
+
+{% load static %}
+
+<html>
+  <head>
+      <title>Employee data</title>
+      <style>
+      html, body
+      {
+      min-height: 100%;
+      background:url('images/banner.jpg' );
+      background-size:cover;
+      }
+      body, div, form, input, select, textarea, label {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 20px;
+      }
+      h1 {
+      position: absolute;
+      margin:0;
+      font-size: 60px;
+      color: green;
+      line-height: 83px;
+      top:50px;
+      }
+      legend {
+      padding: 10px;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 18px;
+      color: white;
+      background-color: #1c87c9;
+      border-radius:5px;
+      }
+      .testbox {
+      display: flex;
+      padding: 20px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+      background: #FFFAFA;
+      box-shadow: 0 0 8px #006622;
+      }
+      .banner {
+      position: relative;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius:10px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+       .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #006622;
+      color: #006622;
+      }
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+      .colums div {
+      width:20%;
+      }
+
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background:  #1c87c9;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background:  #0692e8;
+      }
+    </style>
+  </head>
+
+<body>
+    <div class="testbox">
+        <form action="attritionpredict" method="post">
+            <div class="banner">
+                <h1> Employee's Attrition Prediction</h1>
+            </div>
+            <br />
+            <fieldset>
+                <legend>🛑Fill the Correct information for Better Results🛑</legend>
+                {% csrf_token %}
+                <div class="colums">
+                        <label><b>Age</b></label>
+                        <input type="text" name="Age" required>
+                    </div>
+                    <div class="item">
+                        <label><b>BusinessTravel</b></label>
+                        <input type="text" name="BusinessTravel" required>
+                    </div>
+                    <div class="item">
+                        <label><b>DailyRate</b></label>
+                        <input type="text" name="DailyRate" required>
+                    </div>
+                    <div class="item">
+                        <label><b>Department</b></label>
+                        <input type="text" name="Department" required>
+                    </div>
+                    <div class="item">
+                        <label><b>DistanceFromHome</b></label>
+                        <input type="text" name="DistanceFromHome" required>
+                    </div><div class="item">
+                        <label><b>Education</b></label>
+                        <input type="text" name="Education" required>
+                    </div><div class="item">
+                        <label><b>EducationField</b></label>
+                        <input type="text" name="EducationField" required>
+                    </div>
+                    <!-- <div class="item">
+                        <label><b>EmployeeCount</b></label>
+                        <input type="text" name="EmployeeCount" required>
+                    </div> -->
+                    <div class="item">
+                        <label><b>EnvironmentSatisfaction</b></label>
+                        <input type="text" name="EnvironmentSatisfaction" required>
+                    </div><div class="item">
+                        <label><b>Gender</b></label>
+                        <input type="text" name="Gender" required>
+                    </div><div class="item">
+                        <label><b>HourlyRate</b></label>
+                        <input type="text" name="HourlyRate" required>
+                    </div><div class="item">
+                        <label><b>JobInvolvement</b></label>
+                        <input type="text" name="JobInvolvement" required>
+                    </div><div class="item">
+                        <label><b>JobLevel</b></label>
+                        <input type="text" name="JobLevel" required>
+                    </div>
+                    <!-- <div class="item">
+                        <label><b>JobRole</b></label>
+                        <input type="text" name="JobRole" required>
+                    </div> -->
+                    <div class="item">
+                        <label><b>JobSatisfaction</b></label>
+                        <input type="text" name="JobSatisfaction" required>
+                    </div>
+                    <div class="item">
+                        <label><b>MaritalStatus</b></label>
+                        <input type="text" name="MaritalStatus" required>
+                    </div>
+                    <div class="item">
+                        <label><b>MonthlyIncome</b></label>
+                        <input type="text" name="MonthlyIncome" required>
+                    </div>
+                    <div class="item">
+                        <label><b>MonthlyRate</b></label>
+                        <input type="text" name="MonthlyRate" required>
+                    </div>
+                    <div class="item">
+                        <label><b>NumCompaniesWorked</b></label>
+                        <input type="text" name="NumCompaniesWorked" required>
+                    </div>
+                    <!-- <div class="item">
+                        <label><b>Over18</b></label>
+                        <input type="text" name="Over18" required>
+                    </div> -->
+                    <div class="item">
+                        <label><b>OverTime</b></label>
+                        <input type="text" name="OverTime" required>
+                    </div>
+                    <div class="item">
+                        <label><b>PercentSalaryHike</b></label>
+                        <input type="text" name="PercentSalaryHike" required>
+                    </div>
+                    <div class="item">
+                        <label><b>PerformanceRating</b></label>
+                        <input type="text" name="PerformanceRating" required>
+                    </div>
+                    <div class="item">
+                        <label><b>RelationshipSatisfaction</b></label>
+                        <input type="text" name="RelationshipSatisfaction" required>
+                    </div>
+                    <div class="item">
+                        <label><b>StandardHours</b></label>
+                        <input type="text" name="StandardHours" required>
+                    </div>
+                    <div class="item">
+                        <label><b>StockOptionLevel</b></label>
+                        <input type="text" name="StockOptionLevel" required>
+                    </div>
+                    <div class="item">
+                        <label><b>TotalWorkingYears</b></label>
+                        <input type="text" name="TotalWorkingYears" required>
+                    </div>
+                    <div class="item">
+                        <label><b>TrainingTimesLastYear</b></label>
+                        <input type="text" name="TrainingTimesLastYear" required>
+                    </div>
+                    <div class="item">
+                        <label><b>WorkLifeBalance</b></label>
+                        <input type="text" name="WorkLifeBalance" required>
+                    </div>
+                    <div class="item">
+                        <label><b>YearsAtCompany</b></label>
+                        <input type="text" name="YearsAtCompany" required>
+                    </div>
+                    <div class="item">
+                        <label><b>YearsInCurrentRole</b></label>
+                        <input type="text" name="YearsInCurrentRole" required>
+                    </div>
+                    <div class="item">
+                        <label><b>YearsSinceLastPromotion</b></label>
+                        <input type="text" name="YearsSinceLastPromotion" required>
+                    </div>
+                    <div class="item">
+                        <label><b>YearsWithCurrManager</b></label>
+                        <input type="text" name="YearsWithCurrManager" required>
+                    </div>                
+                </div>
+            </fieldset>
+            <div class="btn-block">
+                <button type="submit">PREDICT ATTRITION</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+{% endblock %}
+<!-- EmployeeNumber,Age,#Attrition,BusinessTravel,DailyRate,Department,DistanceFromHome,
+Education,EducationField,EmployeeCount,EnvironmentSatisfaction,Gender,HourlyRate,
+JobInvolvement,JobLevel,JobRole,JobSatisfaction,MaritalStatus,MonthlyIncome,MonthlyRate,
+NumCompaniesWorked,Over18,OverTime,PercentSalaryHike,PerformanceRating,RelationshipSatisfaction,
+StandardHours,StockOptionLevel,TotalWorkingYears,TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,
+YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager -->
