@@ -64,7 +64,7 @@
 	            </div>
 	            <div class="form-group d-md-flex">
 								<div class="w-55 text-md-right">
-									<a href="login" style="color: rgb(255, 255, 255)">Already have an account ? &nbsp click here</a>
+									<a href="login" style="color: rgb(255, 255, 255)">| Already have an account ? | click here |</a>
 								</div>
 	            </div>
 	          </form>
@@ -72,19 +72,19 @@
 			  <script>alert("{{i}}")</script>
 			  {% endfor %}
 
-			  <!-- {% if error == "no" %}
+			  {% if error == "no" %}
 			  <script>
 				alert("Registered Successfully")
-				window.location= ('{% url 'login' %}');
+				window.location= ('{% url "login" %}');
 			  </script>
 			   {% endif %}
 
 			   {% if error == "yes" %}
 			   <script>
 				 alert("Register Not Successful")
-				 window.location=('{% url 'register' %}');
+				 window.location=('{% url "register" %}');
 			   </script>
-				{% endif %} -->
+				{% endif %}
 		      </div>
 				</div>
 				
