@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User,auth
 from django.contrib.auth import authenticate
 from django.contrib import messages
-from .models import Register
 #user is table name
 
 # Create your views here.
@@ -38,28 +37,24 @@ def register(request):
         username=request.POST['uname']
         last=request.POST['lname']
         mail=request.POST['email']
-        phn=request.POST['phone']
         p1=request.POST['pass']
-        # p2=request.POST['pass1']
-        # if p1==p2:
-        if User.objects.filter(username=username).exists():
+        p2=request.POST['pass1']
+        if p1==p2:
+            if User.objects.filter(username=username).exists():
                 messages.info(request,"Username already exits")
                 return render(request,'register.html')
         elif User.objects.filter(email=mail).exists():
             messages.info(request,"Email already exits")
             return render(request,'register.html')
-        else: 
         #create database connection for that create obj for db table
-                user=User.objects.create_user(firstname=first,lastname=last,
-                email=mail,password=p1,username=username,mobile=phn)
-                user.save()
-                return redirect('login')
+        user=User.objects.create_user(first_name=first,last_name=last,
+             email=mail,password=p1,username=username)
+        user.save()
+        return redirect('login')
     else:
         # messages.info(request,"Password not matching")
         return render(request,'register.html')
-
-    # else:
-    #     return render(request,"register.html")
+    
 def attrition(request):
      return render(request,'attrition.html') 
 def attritionpredict(request):
@@ -71,19 +66,16 @@ def attritionpredict(request):
             DistanceFromHome = request.POST['DistanceFromHome']
             Education=request.POST['Education']
             EducationField=request.POST['EducationField']
-            # EmployeeCount=request.POST['EmployeeCount']
             EnvironmentSatisfaction=request.POST['EnvironmentSatisfaction']
             Gender=request.POST['Gender']
             HourlyRate= request.POST['HourlyRate']
             JobInvolvement=request.POST['JobInvolvement']
             JobLevel=request.POST['JobLevel']
-            # JobRole=request.POST['JobRole']
             JobSatisfaction=request.POST['JobSatisfaction']
             MaritalStatus=request.POST['MaritalStatus']
             MonthlyIncome=request.POST['MonthlyIncome']
             MonthlyRate=request.POST['MonthlyRate']
             NumCompaniesWorked=request.POST['NumCompaniesWorked']
-            # Over18=request.POST['Over18']
             OverTime=request.POST['OverTime']
             PercentSalaryHike=request.POST['PercentSalaryHike']
             PerformanceRating=request.POST['PerformanceRating']
@@ -134,18 +126,7 @@ def attritionpredict(request):
                       'TotalWorkingYears':TotalWorkingYears,'TrainingTimesLastYear':TrainingTimesLastYear,'WorkLifeBalance':WorkLifeBalance,
                       'YearsAtCompany':YearsAtCompany,'YearsInCurrentRole':YearsInCurrentRole,
                       'YearsSinceLastPromotion':YearsSinceLastPromotion,'YearsWithCurrManager':YearsWithCurrManager})
-        else:  
+        else:
             return render(request, 'attritionpredict.html')
-             
-    #         """  'Age', 'Attrition', 'BusinessTravel', 'DailyRate',
-    #    'Department', 'DistanceFromHome', 'Education', 'EducationField',
-    #    'EmployeeCount', 'EnvironmentSatisfaction', 'Gender', 'HourlyRate',
-    #    'JobInvolvement', 'JobLevel', 'JobRole', 'JobSatisfaction',
-    #    'MaritalStatus', 'MonthlyIncome', 'MonthlyRate', 'NumCompaniesWorked',
-    #    'Over18', 'OverTime', 'PercentSalaryHike', 'PerformanceRating',
-    #    'RelationshipSatisfaction', 'StandardHours', 'StockOptionLevel',
-    #    'TotalWorkingYears', 'TrainingTimesLastYear', 'WorkLifeBalance',
-    #    'YearsAtCompany', 'YearsInCurrentRole', 'YearsSinceLastPromotion',
-    #    'YearsWithCurrManager' """
 
 
