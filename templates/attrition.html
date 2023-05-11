@@ -129,7 +129,7 @@
                     </div>
                     <div class="item">
                         <label><b>BusinessTravel</b></label>
-                        <input type="text" name="BusinessTravel" required>
+                        <input type="text" name="BusinessTravel" placeholder="Non-travel=0, Travel-Rarely=1, Travel_Freaquently=2" required>
                     </div>
                     <div class="item">
                         <label><b>DailyRate</b></label>
@@ -137,17 +137,17 @@
                     </div>
                     <div class="item">
                         <label><b>Department</b></label>
-                        <input type="text" name="Department" required>
+                        <input type="text" name="Department" placeholder="Research&dev=1, Sales=2, Other=0" required>
                     </div>
                     <div class="item">
                         <label><b>DistanceFromHome</b></label>
                         <input type="text" name="DistanceFromHome" required>
                     </div><div class="item">
                         <label><b>Education</b></label>
-                        <input type="text" name="Education" required>
+                        <input type="text" name="Education" placeholder="Between 1 to 5" required>
                     </div><div class="item">
                         <label><b>EducationField</b></label>
-                        <input type="text" name="EducationField" required>
+                        <input type="text" name="EducationField" placeholder="HR=0, LifeScience=1, Marketing=2, Medical=3, Other=4, Tech.Degree=5" required>
                     </div>
                     <!-- <div class="item">
                         <label><b>EmployeeCount</b></label>
@@ -155,19 +155,19 @@
                     </div> -->
                     <div class="item">
                         <label><b>EnvironmentSatisfaction</b></label>
-                        <input type="text" name="EnvironmentSatisfaction" required>
+                        <input type="text" name="EnvironmentSatisfaction" placeholder=" Between 1 to 4" required>
                     </div><div class="item">
                         <label><b>Gender</b></label>
-                        <input type="text" name="Gender" required>
+                        <input type="text" name="Gender" placeholder="Female=0, Male=1" required>
                     </div><div class="item">
                         <label><b>HourlyRate</b></label>
                         <input type="text" name="HourlyRate" required>
                     </div><div class="item">
                         <label><b>JobInvolvement</b></label>
-                        <input type="text" name="JobInvolvement" required>
+                        <input type="text" name="JobInvolvement" placeholder=" Between 1 to 4" required>
                     </div><div class="item">
                         <label><b>JobLevel</b></label>
-                        <input type="text" name="JobLevel" required>
+                        <input type="text" name="JobLevel" placeholder=" Between 1 to 5" required>
                     </div>
                     <!-- <div class="item">
                         <label><b>JobRole</b></label>
@@ -175,11 +175,11 @@
                     </div> -->
                     <div class="item">
                         <label><b>JobSatisfaction</b></label>
-                        <input type="text" name="JobSatisfaction" required>
+                        <input type="text" name="JobSatisfaction" placeholder=" Between 1 to 4"required>
                     </div>
                     <div class="item">
                         <label><b>MaritalStatus</b></label>
-                        <input type="text" name="MaritalStatus" required>
+                        <input type="text" name="MaritalStatus" placeholder="Married=1, Single=2, Divorce=0" required>
                     </div>
                     <div class="item">
                         <label><b>MonthlyIncome</b></label>
@@ -193,13 +193,9 @@
                         <label><b>NumCompaniesWorked</b></label>
                         <input type="text" name="NumCompaniesWorked" required>
                     </div>
-                    <!-- <div class="item">
-                        <label><b>Over18</b></label>
-                        <input type="text" name="Over18" required>
-                    </div> -->
                     <div class="item">
                         <label><b>OverTime</b></label>
-                        <input type="text" name="OverTime" required>
+                        <input type="text" name="OverTime" placeholder="No=0, Yes=1" required>
                     </div>
                     <div class="item">
                         <label><b>PercentSalaryHike</b></label>
@@ -207,19 +203,19 @@
                     </div>
                     <div class="item">
                         <label><b>PerformanceRating</b></label>
-                        <input type="text" name="PerformanceRating" required>
+                        <input type="text" name="PerformanceRating" placeholder=" Between 1 to 4" required>
                     </div>
                     <div class="item">
                         <label><b>RelationshipSatisfaction</b></label>
-                        <input type="text" name="RelationshipSatisfaction" required>
+                        <input type="text" name="RelationshipSatisfaction" placeholder="Between 1 to 4" required>
                     </div>
                     <div class="item">
                         <label><b>StandardHours</b></label>
-                        <input type="text" name="StandardHours" required>
+                        <input type="text" name="StandardHours" placeholder="80 hours are Compulsary" required>
                     </div>
                     <div class="item">
                         <label><b>StockOptionLevel</b></label>
-                        <input type="text" name="StockOptionLevel" required>
+                        <input type="text" name="StockOptionLevel" placeholder=" Between 0 to 3" required>
                     </div>
                     <div class="item">
                         <label><b>TotalWorkingYears</b></label>
@@ -231,7 +227,7 @@
                     </div>
                     <div class="item">
                         <label><b>WorkLifeBalance</b></label>
-                        <input type="text" name="WorkLifeBalance" required>
+                        <input type="text" name="WorkLifeBalance" placeholder="Between 0 to 5" required>
                     </div>
                     <div class="item">
                         <label><b>YearsAtCompany</b></label>
@@ -260,9 +256,3 @@
 
 </html>
 {% endblock %}
-<!-- EmployeeNumber,Age,#Attrition,BusinessTravel,DailyRate,Department,DistanceFromHome,
-Education,EducationField,EmployeeCount,EnvironmentSatisfaction,Gender,HourlyRate,
-JobInvolvement,JobLevel,JobRole,JobSatisfaction,MaritalStatus,MonthlyIncome,MonthlyRate,
-NumCompaniesWorked,Over18,OverTime,PercentSalaryHike,PerformanceRating,RelationshipSatisfaction,
-StandardHours,StockOptionLevel,TotalWorkingYears,TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,
-YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager -->

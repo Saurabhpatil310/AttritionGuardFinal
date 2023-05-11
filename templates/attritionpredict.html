@@ -211,9 +211,15 @@
     </div>
   
   <div class="item">
-    <p style="color:red;font-size:30px;">
-      Result : Attrition={{Attrition}}&nbsp;&nbsp;---------------->[ 'O' means "NO" & '1' means "YES" ]
+    {% if Attrition == 0 %}
+    <p style="color:green;font-size:30px;">
+      Result : High chances of Staying with Organization 😊
     </p>
+    {%else%}
+    <p style="color:red;font-size:30px;">
+      Result : 🛑 High chances of Leaving the Organization 🛑
+    </p>
+    {% endif %}
   </div>
   <form method="get" action="/">
     <div class="btn-block">
