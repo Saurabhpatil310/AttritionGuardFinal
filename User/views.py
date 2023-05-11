@@ -24,11 +24,11 @@ def login(request):
         user=authenticate(username=uname,password=pass1)
         if user is not None:
             auth.login(request,user)
-            messages.info(request,"Login successfully")
+            messages.info(request,"Login Successful")
             return render (request,'index.html')
         else:
-            messages.info(request,"Invalid Password or Username")
-            return render(request,'login.html')
+            messages.info(request,"Invalid Credentials")
+            return render(request,'login.html') 
     return render(request,'login.html')
 
 def register(request):
