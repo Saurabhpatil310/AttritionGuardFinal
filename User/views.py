@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User,auth
 from django.contrib.auth import authenticate
 from django.contrib import messages
+from .models import Data
 #user is table name
 
 # Create your views here.
@@ -111,11 +112,15 @@ def attritionpredict(request):
                                        EnvironmentSatisfaction,Gender,HourlyRate,JobInvolvement,JobLevel,JobSatisfaction,MaritalStatus,MonthlyIncome,MonthlyRate
                                        ,NumCompaniesWorked,OverTime,PercentSalaryHike,PerformanceRating,RelationshipSatisfaction,StandardHours,StockOptionLevel,TotalWorkingYears,
                                        TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager]])
-        #    """ prediction=lungcancerdata.objects.create(Age=Age,Gender=gender,Air_Pollution=airpollution,Alcohol_Use=alcoholuse,Dust_Allergy=dustallergy,OccuPational_Hazards=occupationalhazards,Genetic_Risk=geneticrisk,
-        #                                          Chronic_Lung_Disease=chroniclungdisease,Balanced_Diet=balanceddiet,Obesity=obesity,Smoking=smoking,Passive_Smoker=passivesmoker,Chest_Pain=chestpain,Coughing_Of_Blood=coughingofblood,
-        #                                          Fatigue=fatigue,Weight_Loss=weightloss,Shortness_Of_Breath=shortnessofbreath,Wheezing=wheezing,Swallowing_Difficulty=swallowingdifficulty,Clubbing_Of_Finger_Nails=clubbingoffingernails,
-        #                                          Frequent_Cold=frequentcold,Dry_Cough=dry_cough,Snoring=snoring)
-        #     prediction.save()"""
+           #Storing user input prediction input data in DataBase
+            data=Data.objects.create( Age=Age,BusinessTravel=BusinessTravel,DailyRate=DailyRate,Department=Department,DistanceFromHome=DistanceFromHome,Education=Education,
+                  EducationField=EducationField,EnvironmentSatisfaction=EnvironmentSatisfaction,Gender=Gender,HourlyRate=HourlyRate,JobInvolvement=JobInvolvement,JobLevel=JobLevel,
+                  JobSatisfaction=JobSatisfaction,MaritalStatus=MaritalStatus,MonthlyIncome=MonthlyIncome,MonthlyRate=MonthlyRate,NumCompaniesWorked=NumCompaniesWorked,
+                  OverTime=OverTime,PercentSalaryHike=PercentSalaryHike,PerformanceRating=PerformanceRating,RelationshipSatisfaction=RelationshipSatisfaction,StandardHours=StandardHours,StockOptionLevel=StockOptionLevel,
+                  TotalWorkingYears=TotalWorkingYears,TrainingTimesLastYear=TrainingTimesLastYear,WorkLifeBalance=WorkLifeBalance,YearsAtCompany=YearsAtCompany,YearsInCurrentRole=YearsInCurrentRole,
+                  YearsSinceLastPromotion=YearsSinceLastPromotion,YearsWithCurrManager=YearsWithCurrManager)
+            data.save()
+        
             return render(request,'attritionpredict.html',
                       {"Attrition": prediction,'Age':Age,'BusinessTravel':BusinessTravel,'DailyRate':DailyRate,'Department':Department,'DistanceFromHome':DistanceFromHome,
                        'Education':Education,'EducationField':EducationField,
@@ -127,6 +132,4 @@ def attritionpredict(request):
                       'YearsAtCompany':YearsAtCompany,'YearsInCurrentRole':YearsInCurrentRole,
                       'YearsSinceLastPromotion':YearsSinceLastPromotion,'YearsWithCurrManager':YearsWithCurrManager})
         else:
-            return render(request, 'attritionpredict.html')
-
-
+             return render(request, 'attritionpredict.html')
